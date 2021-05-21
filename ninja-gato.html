@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLANTILLA DE BOOTSTRAP CON JQUERY</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <style>
+        /* mis estilos */
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <button class=" sw mt-5 border d-block col-2 mx-auto text-center btn-primary">Restaurar</button>
+        <h2 class="col-6 display-6 mt-4 mx-auto btn-light text-center">Reemplaza una imagen por otra al hacer click</h2>
+        <div class="row">
+            <div class="col-3 px-4">
+                <img src="img/aidorucat.png" class="flip" src2="img/domo-cat.png" width="200" alt="adventure">
+            </div>
+            <div class="col-3 px-2">
+                <img src=" img/adventure-cat.png" class="flip flip1" src2="img/daftpunk.gif" width="200"
+                    alt="adventure">
+            </div>
+            <div class="col-3 px-2">
+                <img src="img/stormtroopocat.png" class="flip flip2" src2="img/oktobercat.png" width="200"
+                    alt="adventure">
+            </div>
+            <div class="col-3 px-2">
+                <img src="img/mario.png" width="200" class="flip flip3" src2="img/chellocat.jpg" alt="adventure">
+            </div>
+            <div class="col-3 px-2">
+                <img src="img/chellocat.jpg" class="flip flip4" src2="img/kantana.jpg" width="200" alt="adventure">
+            </div>
+            <div class="col-3 px-2">
+                <img src="img/coder2.jpg" class="flip flip5" src2="img/jean-luc-picat.jpg" width="200" alt="adventure">
+            </div>
+            <div class="col-3 px-2">
+                <img src="img/linkcat.png" class="flip flip6" src2="img/heisencat.png" width="200" alt="adventure">
+            </div>
+            <div class="col-3 px-2">
+                <img src="img/ironcat.png" class="flip flip7" src2="img/codercat.jpg" width="200" alt="adventure">
+            </div>
+        </div>
+    </div>
+
+
+    <!-- DESDE ACA SOLO SCRIPT -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+
+        // let fuente1 = [$('.flip1').attr('src'), $('.flip1').attr('src2')];
+        // let fuente2= [$('.flip2').attr('src'), $('.flip2').attr('src2')];
+        // let fuente3 = [$('.flip3').attr('src'), $('.flip3').attr('src2')];
+        // let fuente4 = [$('.flip4').attr('src'), $('.flip4').attr('src2')];
+        // let fuente5 = [$('.flip5').attr('src'), $('.flip5').attr('src2')];
+        // let fuente6 = [$('.flip6').attr('src'), $('.flip6').attr('src2')];
+        // let fuente7 = [$('.flip7').attr('src'), $('.flip7').attr('src2')];
+
+
+        $('.flip').click(function () {
+            let temp = $(this).attr("src");
+            console.log(temp);
+            $(this).attr("src", $(this).attr("src2"));
+            $(this).attr("src2", temp);
+        });
+        // let fuente = [$('.flip').attr('src'), $('.flip').attr('src2')];
+
+        // $(this).attr("src",fuente[1]);
+        // fuente.reverse();
+
+        // $('.flip1').click(function () {
+        //     $(this).attr("src",fuente1[1]);
+        //     fuente1.reverse();
+        // });
+        // $('.flip2').click(function () {
+        //     $(this).attr("src",fuente2[1]);
+        //     fuente2.reverse();
+        // });
+        // $('.flip3').click(function () {
+        //     $(this).attr("src",fuente3[1]);
+        //     fuente3.reverse();
+        // });
+        // $('.flip4').click(function () {
+        //     $(this).attr("src",fuente4[1]);
+        //     fuente4.reverse();
+        // });
+        // $('.flip5').click(function () {
+        //     $(this).attr("src",fuente5[1]);
+        //     fuente5.reverse();
+        // });
+        // $('.flip6').click(function () {
+        //     $(this).attr("src",fuente6[1]);
+        //     fuente6.reverse();
+        // });
+        // $('.flip7').click(function () {
+        //     $(this).attr("src",fuente7[1]);
+        //     fuente7.reverse();
+        // });
+
+        // $('img').click(function () {
+        //     $(this).hide();
+        // });
+
+
+        $('.sw').click(function () {
+            $(this).toggleClass("btn-danger");
+            location.reload();
+        }
+        );
+
+    </script>
+</body>
+
+</html>
